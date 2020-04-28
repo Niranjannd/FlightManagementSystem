@@ -1,0 +1,222 @@
+ @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" ;
+ body{
+    margin: 0;
+    padding: 0;
+    font-size: sans-serif;
+    background: url(/assets/images/tt.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: initial;
+} 
+
+.input1{
+        width: 280px;
+        position: absolute;
+        left: 50%;      
+}
+.input2{
+    width: 280px;
+    position: absolute;
+    left: 66%
+}
+.submit1{
+    width: 280px;
+    position: absolute;
+    left: 82%;
+}
+.input1 input{
+    color: black;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 5px;
+    background: cornsilk;
+    
+}
+.input2 input{
+    color: black;
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 5px;
+    font-size: 16px;
+    background: cornsilk;
+}
+
+.bottom{
+    top: 95%;
+    position: absolute;
+    left: 40%;
+    background-attachment:initial;
+
+}    
+li {
+    float: left;
+  }
+  h1{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+   float: left;
+   font-size: 40px;
+   color:black;
+   border-bottom:5px solid black;
+   padding: 8px;
+}  
+.inputt1{
+    top: 26%;
+    position: absolute;
+    left: 50%;
+    background-attachment: initial;
+    width: auto;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black 
+}
+
+.inputt1 select{
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 18px;
+    width: 120px;
+    float: left;
+    margin: 0 15px;
+}
+.inputt2{
+    top: 34%;
+    position: absolute;
+    left: 50%;
+    background-attachment: initial;
+    width: auto;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black 
+}
+.inputt2 input{
+    outline: none;
+    border: none;
+    background: none;
+}
+.inputt3{
+    top: 42%;
+    position: absolute;
+    left: 50%;
+    background-attachment: initial;
+    width: auto;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black 
+}
+.inputt3 input{
+    outline: none;
+    border: none;
+    background: none;
+}
+.inputt4{
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    background-attachment: initial;
+    width: auto;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black 
+}
+.inputt4 input{
+    outline: none;
+    border: none;
+    background: none;
+}
+.inputt5{
+    top: 58%;
+    position: absolute;
+    left: 50%;
+    background-attachment: initial;
+    width: auto;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black 
+}
+.inputt5 input{
+    outline: none;
+    border: none;
+    background: none;
+}
+.inputt6{
+    top: 66%;
+    position: absolute;
+    left: 50%;
+    background-attachment: initial;
+    width: auto;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid black 
+}
+.inputt6 input{
+    outline: none;
+    border: none;
+    background: none;
+}
+.submit2{
+    position: absolute;
+    left: 50%;
+    top: 78%;
+}
+  .error1{
+    color: red;
+    margin: 4px 0;
+    position:absolute;
+    top: 30%;
+    left:68%;       
+}
+.error2{
+    color: red;
+    margin: 4px 0;
+    position: absolute;
+    top: 38%;
+    left: 68%;    
+}
+.error3{
+    font-size: 0.85em;
+    color: red;
+    margin: 4px 0;
+    position: absolute;
+    top: 46%;
+    left:68%;    
+}.error4{
+    font-size: 0.85em;
+    color: red;
+    margin: 4px 0;
+    position: absolute;
+    top: 54%;
+    left: 68%;    
+}.error5{
+    color: red;
+    margin: 4px 0;
+    position: absolute;
+    top: 62%;
+    left: 68%;    
+}.error6{
+    color: red;
+    margin: 4px 0;
+    position: absolute;
+    top: 70%;
+    left: 68%;    
+}
+.notify
+{
+    position: absolute;
+    left: 40%;
+    width: fit-content;    
+}
