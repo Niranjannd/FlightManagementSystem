@@ -17,11 +17,9 @@ import com.cg.service.UserServiceI;
 @CrossOrigin(origins="http://localhost:4200")
 @RestController
 public class UserController
-{
-	
+{	
 	@Autowired
 	UserServiceI userserv;
-	
 	
 	@PostMapping(value="/user/new",consumes= {"application/json"})
 	public String addUser(@RequestBody User user)
@@ -30,20 +28,17 @@ public class UserController
 		return "User Added";	
 	}
 		
-	
 	@GetMapping(value="/user/{userId}")
 	public User viewUser(@PathVariable BigInteger userId)
 	{
 		return userserv.viewUser(userId);
 	}
 		
-	
 	@GetMapping(value="/user")
 	public List<User> viewUsers()
 	{
 		return userserv.viewUsers();		
 	}
-	
 	
 	@PutMapping(value="/user/update",consumes= {"application/json"})
 	public String updateUser(@RequestBody User user)
@@ -58,8 +53,6 @@ public class UserController
 		userserv.deleteUser(userId);
 		return "student deleted";
 	}
-
-	
 }
 
 
