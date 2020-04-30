@@ -12,10 +12,11 @@ import com.cg.errors.UserCreatedException;
 
 @Service
 public class UserServiceImpl implements UserServiceI {
-	User user;
+	
+	//dao class interface is injected here to use in this class to access methods in dao class.
 	@Autowired
 	UserDaoI userdao;
-	
+	// UserCreatedException is custom exception used to show user defined exceptions in the project.
 	@Override
 	public void addUser(User u) throws UserCreatedException
 	{
