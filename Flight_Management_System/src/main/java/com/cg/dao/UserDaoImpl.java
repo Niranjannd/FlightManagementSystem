@@ -47,7 +47,6 @@ public class UserDaoImpl implements UserDaoI {
 		u.setUserPassword(user.getUserPassword());
 		u.setUserPhone(user.getUserPhone());
 		u.setUserEmail(user.getUserEmail());
-	
 	}
 	
 	@Override
@@ -57,5 +56,4 @@ public class UserDaoImpl implements UserDaoI {
 		System.out.println(u.getUserId()+" "+u.getUserName());
 		emanager.remove(u);
 	}
-
 }
