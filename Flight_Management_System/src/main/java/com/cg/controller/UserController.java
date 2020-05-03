@@ -17,13 +17,8 @@ import com.cg.service.UserServiceI;
 @CrossOrigin(origins="http://localhost:4200")
 @RestController 
 public class UserController
-<<<<<<< HEAD
 {
 	// service class interface is injected here to use in this class to call service methods here.
-=======
-{	
-	// service class interface is injected here to use in this class to call service class methods here.
->>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	@Autowired
 	UserServiceI userserv;
 	
@@ -34,30 +29,22 @@ public class UserController
 		userserv.addUser(user);
 		return "User Added";	
 	}
-<<<<<<< HEAD
 		
 	//get mapping is used to fetch data when following url is run. 
-=======
-	
-	//get mapping is used to fetch data when following url is run.
->>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	@GetMapping(value="/user/{userId}")
 	public User viewUser(@PathVariable BigInteger userId)
 	{
 		return userserv.viewUser(userId);
 	}
 		
+	
 	@GetMapping(value="/user")
 	public List<User> viewUsers()
 	{
 		return userserv.viewUsers();		
 	}
 	
-<<<<<<< HEAD
 	// put mapping is used to update data when following url is run. 
-=======
-	// put mapping is used to update data when following url is run.
->>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	@PutMapping(value="/user/update",consumes= {"application/json"})
 	public String updateUser(@RequestBody User user)
 	{
@@ -71,11 +58,7 @@ public class UserController
 	{
 		userserv.deleteUser(userId);
 		return "student deleted";
-<<<<<<< HEAD
 	}	
-=======
-	}
->>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 }
 
 
