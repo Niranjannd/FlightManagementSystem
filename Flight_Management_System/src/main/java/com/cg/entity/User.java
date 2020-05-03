@@ -8,7 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+<<<<<<< HEAD
 @Table(name="user20") // table annotation give name to the table user20
+=======
+@Table(name="user20")// table annotation give name to the table user20
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 public class User {
 	
 	@Column

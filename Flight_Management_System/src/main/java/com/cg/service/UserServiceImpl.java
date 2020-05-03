@@ -2,24 +2,30 @@ package com.cg.service;
 
 import java.math.BigInteger;
 import java.util.List;
-
 import org.omg.CORBA.UserException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
-
 import com.cg.dao.UserDaoI;
 import com.cg.entity.User;
 import com.cg.errors.UserCreatedException;
 
 @Service
 public class UserServiceImpl implements UserServiceI {
+<<<<<<< HEAD
 
 	//dao class interface is injected here to use in this class to access methods in dao class.
 	@Autowired
 	UserDaoI userdao;
 	
 	// UserCreatedException is custom exception used to show user defined exceptions in the project
+=======
+	
+	//dao class interface is injected here to use in this class to access methods in dao class.
+	@Autowired
+	UserDaoI userdao;
+	// UserCreatedException is custom exception used to show user defined exceptions in the project.
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	@Override
 	public void addUser(User u) throws UserCreatedException
 	{
@@ -37,7 +43,6 @@ public class UserServiceImpl implements UserServiceI {
 	public User viewUser(BigInteger userId) throws UserCreatedException
 	{
 		User user = userdao.viewUser(userId);
-		
 		if(user!=null)
 		{
 			return user;		
@@ -45,26 +50,39 @@ public class UserServiceImpl implements UserServiceI {
 		else
 		{
 			throw new UserCreatedException("Id not found."); 
+<<<<<<< HEAD
 		}
+=======
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	}
 		
 	@Override
 	public List<User> viewUsers()
 	{
-		
 		return userdao.viewUsers();
 	}
 		
-
 	@Override
+<<<<<<< HEAD
 	public void updateUser(User user) throws UserCreatedException
+=======
+	public void updateUser(User user)
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	{
 		userdao.updateUser(user);
 	}
 
 	@Override
+<<<<<<< HEAD
 	public void deleteUser(BigInteger userId)
 	{	
 		userdao.deleteUser(userId);
 	}
 }
+=======
+	public void deleteUser(BigInteger userId) 
+	{	
+		userdao.deleteUser(userId);	
+	}
+}
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de

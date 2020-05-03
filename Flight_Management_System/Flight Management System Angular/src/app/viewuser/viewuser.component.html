@@ -1,0 +1,24 @@
+<body>
+<table class="table table-bordered table-hover"> 
+    <tr>
+      <th>Type</th>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Password</th>
+      <th>Phone.No</th>
+      <th>Email</th> 
+    </tr>
+    
+  <tbody>
+    <tr *ngFor="let us of users">
+        <td>{{us.userType}}</td>
+        <td>{{us.userId}}</td>
+        <td>{{us.userName}}</td>
+        <td>{{us.userPassword}}</td>
+        <td>{{us.userPhone}}</td>
+        <td>{{us.userEmail}}</td>
+    </tr>
+  </tbody>
+  </table>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>

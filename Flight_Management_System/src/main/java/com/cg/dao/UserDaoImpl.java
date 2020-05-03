@@ -15,22 +15,35 @@ import com.cg.entity.User;
 public class UserDaoImpl implements UserDaoI {
 
 	@PersistenceContext
+<<<<<<< HEAD
 	EntityManager emanager; 
 
+=======
+	EntityManager emanager;
+	
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	// this method add data using entity manager,this is used in login page to signup.
 	@Override
 	public void addUser(User u) 
 	{
 		emanager.persist(u);	
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	// this method fetch data of a particular user, using unique id given that is given to all users.
 	@Override
 	public User viewUser(BigInteger userId) 
 	{
 		return emanager.find(User.class, userId);
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	//  this method fetch data of all users on website that they given in signup.
 	@Override
 	public List<User> viewUsers()
@@ -39,7 +52,11 @@ public class UserDaoImpl implements UserDaoI {
 		return q.getResultList();
 	}
 	
+<<<<<<< HEAD
 	// this method update a particular used, first user is searched using his id and than it is updated. 
+=======
+	// this method update a particular used, first user is searched using his id and than it is updated.
+>>>>>>> 0cdbada06524c3cf0178a505486db6f4c6d884de
 	@Override
 	public void updateUser(User user) 
 	{
