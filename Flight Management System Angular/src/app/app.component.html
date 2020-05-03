@@ -1,0 +1,17 @@
+<html>
+<body>
+    <ul>
+      <li><a *ngIf="userserv.isUserLoggedIn() " routerLink="/" (click)="changeFlagAgain()"><i class="fa fa-home" style="font-size:24px"></i></a></li>
+      <li><a *ngIf="userserv.isUserLoggedIn() && userserv.isAdmin()" routerLink="/view" (click)="changeFlag()">View users </a></li>
+      <li><a *ngIf="userserv.isUserLoggedIn() && userserv.isAdmin()" routerLink="/find" (click)="changeFlag()">Search user</a></li>
+      <li><a *ngIf="userserv.isUserLoggedIn() && userserv.isCustomer()"  routerLink="/update" (click)="changeFlag()">Update user </a></li>
+      <li><a *ngIf="userserv.isUserLoggedIn() && userserv.isAdmin()" routerLink="/delete" (click)="changeFlag()">Delete user </a></li>
+      <li><button *ngIf="userserv.isUserLoggedIn()" (click)="logout()">Log out &nbsp;&nbsp;<i class="fa fa-plane" ></i></button></li>
+    </ul>
+      <router-outlet></router-outlet>
+      <br>
+  <h3 *ngIf="userserv.isUserLoggedIn() && flag" >&nbsp;&nbsp; Welcome  {{name}}, </h3>
+  <h5 *ngIf="userserv.isUserLoggedIn() && flag" >&nbsp;&nbsp; KEEP CALM AND TRAVEL ONN. </h5>  
+  
+  </body>
+</html>

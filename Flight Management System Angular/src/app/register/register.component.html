@@ -1,0 +1,83 @@
+<body>
+<br>
+<form #myform="ngForm" (ngSubmit)="checkLogin()" >
+    <div class="input1">
+    <i class="fa fa-user"></i>
+    <input type="number" placeholder="User id" name="id" [(ngModel)]="id" required ></div>
+    <div class="input2">
+        <i class="fa fa-lock" aria-hidden="true"></i>
+        <input  type="password" placeholder="password" name="password" [(ngModel)]="password" required maxlength="15"></div>
+    <div class="submit1"><input type="submit" value="Log In" [disabled]="!myform.valid"   class="btn btn-primary" ></div>
+</form>
+
+<br><br><hr>
+<div class="notify">
+<div class="alert alert-success" *ngIf="successMessage != undefined">{{successMessage}}</div>
+<div class="alert alert-danger" *ngIf="errorMessage != undefined" >{{errorMessage}} </div>
+</div>
+<h1>Sign up</h1>
+<form  #formdata="ngForm"   (ngSubmit)="addUser(); formdata.reset()" autocomplete="off" >
+    <div class="inputt1">
+    <select  style="color: black;" name="type"  [(ngModel)]="usr.userType" required #typee="ngModel" >
+    <option  value="customer">Customer</option></select>
+    </div>
+   <div *ngIf="typee.invalid && typee.touched" class="error1">
+     <div *ngIf="typee.errors.required">Type is required.</div>
+    </div>
+
+    <div class="inputt2">
+    <input type="number" placeholder="Unique Id" name="id1" [(ngModel)]="usr.userId" required pattern="[1-9][0-9][0-9]"  #idd="ngModel" >
+    </div>
+    <div *ngIf="idd.invalid && idd.touched" class="error2">
+         <div *ngIf="idd.errors.required">Id is required.</div>
+        <div *ngIf="idd.errors.pattern">Id must have 3 digits.</div>
+    </div>
+
+    <div class="inputt3">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="usr.userName"  required  pattern="[a-zA-Z ]*" minlength="5" maxlength="18" #namee="ngModel" >
+    </div>
+    <div *ngIf="namee.invalid && namee.touched" class="error3">
+        <div *ngIf="namee.errors.required">Name is required.</div>
+        <div *ngIf="namee.errors.minlength">Name must be at least 5 characters long.</div>
+        <div *ngIf="namee.errors.pattern"> Name must be in characters.</div>
+    </div>
+    
+    <div class="inputt4">
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="usr.userPassword"  required pattern="^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$" maxlength="15" #passwordd="ngModel" >
+    </div>
+    <div *ngIf="passwordd.invalid && passwordd.touched" class="error4">
+        <div *ngIf="passwordd.errors.required">Password is required.</div>
+        <div *ngIf="passwordd.errors.pattern"> Password should be between 8-15 characters.<br>
+            Password must contain at least one numeric digit and a special character</div>
+    </div>
+    
+    
+    <div class="inputt5">
+    <input type="number" placeholder="Phone Number" name="phone" [(ngModel)]="usr.userPhone"  required pattern="[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" #phonee="ngModel" >   
+    </div>
+    <div *ngIf="phonee.invalid && phonee.touched" class="error5">
+        <div *ngIf="phonee.errors.required">Phone number is required.</div>
+        <div *ngIf="phonee.errors.pattern">Invalid number.</div>
+    </div>
+
+    <div class="inputt6">
+    <input type="text" placeholder="Email Address" name="email" [(ngModel)]="usr.userEmail" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" maxlength="40" #emaill="ngModel" >
+    </div>
+    <div *ngIf="emaill.invalid && emaill.touched" class="error6">
+        <div *ngIf="emaill.errors.required">Email is required. </div>
+        <div *ngIf="emaill.errors.pattern">Invalid email.</div>
+    </div>
+    
+
+    <div class="submit2">
+    <input type="submit" value="Register" [disabled]="!formdata.valid"   class="btn btn-success">
+    </div>
+</form>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="bottom">
+<small>Copyright &copy; FMS Production.All rights reserverd.</small>
+
+</div>
+</body>

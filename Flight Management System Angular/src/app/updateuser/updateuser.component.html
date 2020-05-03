@@ -1,0 +1,52 @@
+<body>
+
+    
+<br><br>
+<button (click) = "update()" class="btn btn-primary">Click to update Information</button>
+
+<h2>Edit Form</h2>
+    <form #formdata2="ngForm"  (ngSubmit)="updateData(); formdata2.reset()" >
+
+    <div class="input3">
+    <input type="text"  name="name" placeholder="User name" [(ngModel)]="updateduser.userName" value="{{updateduser.userName}}"  required  pattern="[a-zA-Z ]*" minlength="5" maxlength="18" #namee="ngModel" ><br><br>
+    </div>
+    <div *ngIf="namee.invalid && namee.touched" class="error3">
+        <div *ngIf="namee.errors.required">Name is required.</div>
+        <div *ngIf="namee.errors.minlength">Name must be at least 5 characters long.</div>
+        <div *ngIf="namee.errors.pattern"> Name must be in characters.</div>
+    </div>
+    
+    <div class="input4">
+    <input type="password" name="password" placeholder="User password" [(ngModel)]="updateduser.userPassword" value="{{updateduser.userPassword}}" required pattern="^^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$" maxlength="15" #passwordd="ngModel" ><br><br>
+    </div>
+    <div *ngIf="passwordd.invalid && passwordd.touched" class="error4">
+        <div *ngIf="passwordd.errors.required">Password is required.</div>
+        <div *ngIf="passwordd.errors.pattern"> Password should be between 8-15 characters.<br>
+            Password must contain at least one numeric digit and a special character</div>
+    </div>
+
+    <div class="input5">
+    <input type="number"  name="phone" placeholder="User number" [(ngModel)]="updateduser.userPhone" value="{{updateduser.userPhone}}" required pattern="[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]" #phonee="ngModel"><br><br>
+    </div>
+    <div *ngIf="phonee.invalid && phonee.touched" class="error5">
+        <div *ngIf="phonee.errors.required">Phone number is required.</div>
+        <div *ngIf="phonee.errors.pattern">Invalid number.</div>
+    </div>
+
+    <div class="input6">
+    <input type="text"  name="email" placeholder="User email" [(ngModel)]="updateduser.userEmail" value="{{updateduser.userEmail}}" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" maxlength="40" #emaill="ngModel" ><br>
+    </div>
+    <div *ngIf="emaill.invalid && emaill.touched" class="error6">
+        <div *ngIf="emaill.errors.required">Email is required. </div>
+        <div *ngIf="emaill.errors.pattern">Invalid email.</div>
+    </div>
+    
+    <div class="submit2"><input type="submit" value="Update" [disabled]="!formdata2.valid"   class="btn btn-success"></div>
+
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="bottom">
+   <small>Copyright &copy; FMS Production.All rights reserverd.</small>
+</div>
+</body>
+

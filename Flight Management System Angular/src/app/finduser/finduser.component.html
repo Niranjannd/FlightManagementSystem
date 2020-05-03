@@ -1,0 +1,44 @@
+<body>
+<div class="notify">
+<div class="alert alert-danger" *ngIf="errorMessage != undefined" >{{errorMessage}} </div>
+</div>
+
+<h1>Search User</h1>
+<form #formdata="ngForm" (ngSubmit)="searchData()" > 
+   <div class="inputt"><input type="number" placeholder="Unique Id" name="id" [(ngModel)]="fid"  required pattern="[1-9][0-9][0-9]"  #idd="ngModel"></div>
+    <div *ngIf="idd.invalid && idd.touched" class="error">
+        <div *ngIf="idd.errors.required">Id is required.</div>
+        <div *ngIf="idd.errors.pattern">Id must have 3 digits.</div></div>
+    
+  <div class="button"><input type="submit"  [disabled]="!formdata.valid" class="btn btn-primary" ></div>
+</form>
+
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="table1">
+<table class="table table-bordered table-hover" >
+    <tr>
+        <th>Type</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Password</th>
+        <th>Phone.No</th>
+        <th>Email</th>
+      </tr>
+
+      <tr>
+        <td>{{finduser.userType}}</td>
+        <td>{{finduser.userId}}</td>
+        <td>{{finduser.userName}}</td>
+        <td>{{finduser.userPassword}}</td>
+        <td>{{finduser.userPhone}}</td>
+        <td>{{finduser.userEmail}}</td>
+      </tr>
+
+</table>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="bottom">
+  <small>Copyright &copy; FMS Production.All rights reserverd.</small>
+  </div>
+</body>

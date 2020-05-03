@@ -14,10 +14,12 @@ import com.cg.errors.UserCreatedException;
 
 @Service
 public class UserServiceImpl implements UserServiceI {
-	User user;
+
+	//dao class interface is injected here to use in this class to access methods in dao class.
 	@Autowired
 	UserDaoI userdao;
 	
+	// UserCreatedException is custom exception used to show user defined exceptions in the project
 	@Override
 	public void addUser(User u) throws UserCreatedException
 	{
@@ -27,11 +29,10 @@ public class UserServiceImpl implements UserServiceI {
 		}
 		catch(DataIntegrityViolationException e)
 		{
-			throw new UserCreatedException("Id already Exists");
+			throw new UserCreatedException("Id already Exist");
 		}
 	}
 	
-
 	@Override
 	public User viewUser(BigInteger userId) throws UserCreatedException
 	{
@@ -42,8 +43,9 @@ public class UserServiceImpl implements UserServiceI {
 			return user;		
 		}
 		else
+		{
 			throw new UserCreatedException("Id not found."); 
-
+		}
 	}
 		
 	@Override
@@ -55,15 +57,14 @@ public class UserServiceImpl implements UserServiceI {
 		
 
 	@Override
-	public void updateUser(User user) {
+	public void updateUser(User user) throws UserCreatedException
+	{
 		userdao.updateUser(user);
-		
 	}
 
 	@Override
-	public void deleteUser(BigInteger userId) {
-		
+	public void deleteUser(BigInteger userId)
+	{	
 		userdao.deleteUser(userId);
-		
-}
+	}
 }

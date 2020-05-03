@@ -15,27 +15,31 @@ import com.cg.entity.User;
 public class UserDaoImpl implements UserDaoI {
 
 	@PersistenceContext
-	EntityManager emanager;
-	
+	EntityManager emanager; 
+
+	// this method add data using entity manager,this is used in login page to signup.
 	@Override
 	public void addUser(User u) 
 	{
 		emanager.persist(u);	
 	}
 
+	// this method fetch data of a particular user, using unique id given that is given to all users.
 	@Override
 	public User viewUser(BigInteger userId) 
 	{
 		return emanager.find(User.class, userId);
 	}
 
+	//  this method fetch data of all users on website that they given in signup.
 	@Override
 	public List<User> viewUsers()
 	{
 		Query q = emanager.createQuery("from User u");
 		return q.getResultList();
 	}
-
+	
+	// this method update a particular used, first user is searched using his id and than it is updated. 
 	@Override
 	public void updateUser(User user) 
 	{
@@ -47,9 +51,9 @@ public class UserDaoImpl implements UserDaoI {
 		u.setUserPassword(user.getUserPassword());
 		u.setUserPhone(user.getUserPhone());
 		u.setUserEmail(user.getUserEmail());
-	
 	}
 	
+	// this method search user using his id and then delete it.
 	@Override
 	public void deleteUser(BigInteger userId)
 	{
@@ -57,5 +61,4 @@ public class UserDaoImpl implements UserDaoI {
 		System.out.println(u.getUserId()+" "+u.getUserName());
 		emanager.remove(u);
 	}
-
 }

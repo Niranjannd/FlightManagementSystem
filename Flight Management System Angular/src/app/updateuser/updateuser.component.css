@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: sans-serif;
+    background: url(/assets/images/view.jpg) no-repeat;
+    background-size:cover ;
+  }
+   button
+   {
+     position: absolute;
+     top: 15%;
+     left: 10%;
+
+   }
+h2{
+  top: 22%;
+  left: 26%;
+  position: absolute;
+}
+
+.input3{
+  position: absolute;
+  top: 28%;
+  left: 25%;
+  font-size: 20px;
+  padding: 6px 0;
+  margin: 7px 0;
+}
+.input3 input{
+color: black;
+  font-size: 14px;
+  margin: 0 10px;
+  padding: 4px;
+  font-size: 20px;
+  background: cornsilk; 
+}
+.input4{
+  position: absolute;
+  top: 38%;
+  left: 25%;
+  font-size: 20px;
+  padding: 6px 0;
+  margin: 7px 0;
+}
+.input4 input{
+color: black;
+  font-size: 14px;
+  margin: 0 10px;
+  padding: 4px;
+  font-size: 20px;
+  background: cornsilk; 
+}
+.input5{
+  position: absolute;
+  top: 48%;
+  left: 25%;
+  font-size: 20px;
+  padding: 6px 0;
+  margin: 7px 0;
+}
+.input5 input{
+color: black;
+  font-size: 14px;
+  margin: 0 10px;
+  padding: 4px;
+  font-size: 20px;
+  background: cornsilk; 
+}
+.input6{
+  position: absolute;
+  top: 58%;
+  left: 25%;
+  font-size: 20px;
+  padding: 6px 0;
+  margin: 7px 0;
+}
+.input6 input{
+color: black;
+  font-size: 14px;
+  margin: 0 10px;
+  padding: 4px;
+  font-size: 20px;
+  background: cornsilk; 
+}
+.submit2
+{
+  position: absolute;
+  top: 70%;
+  left: 30%;
+}
+
+.bottom{
+  top: 95%;
+  position: absolute;
+  left: 40%;
+  background-attachment:initial;
+}    
+
+.error3{
+  font-size: 0.85em;
+  color: red;
+  margin: 4px 0;
+  position: absolute;
+  left: 40%;
+  top: 31%;      
+}
+.error4{
+  font-size: 0.85em;
+  color: red;
+  margin: 4px 0;
+  position: absolute;
+  left: 40%;
+  top: 41%;      
+}
+.error5{
+  color: red;
+  margin: 4px 0;
+  position: absolute;
+  left: 40%;
+  top: 51%;      
+}
+.error6{
+  color: red;
+  margin: 4px 0;
+  position: absolute;
+  left: 40%;
+  top: 61%;      
+}
